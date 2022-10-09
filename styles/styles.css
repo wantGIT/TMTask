@@ -1,3 +1,30 @@
 body {
   background-color: blanchedalmond;
 }
+
+#main_display {
+  display: flex;
+  width: 100%;
+  margin: 32px;
+  flex-wrap: wrap;
+}
+
+.post {
+  width: 300px;
+  height: 125px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: aquamarine;
+}
+
+.post_link {
+  display: flex;
+  justify-content: center;
+}
+
+.subreddit {
+  display: flex;
+  justify-content: center;
+}
