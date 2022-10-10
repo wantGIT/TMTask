@@ -10,8 +10,6 @@ async function main() {
 
   const mainDisplay = document.getElementById("main_display");
 
-  console.log(redditData);
-
   for (let i = 0; i < redditData.length; i++) {
     // The useful data
     const postInfo = redditData[i].data;
@@ -43,7 +41,7 @@ async function main() {
     const thumbURL = redditData[i].data.thumbnail;
     thumbnail.className = "thumbnail";
     thumbnail.alt = "Thumbnail";
-    thumbnail.src = thumbURL;
+    if (thumbURL.match(/((.jpeg)|(.jpg))$/)) thumbnail.src = thumbURL;
 
     // Add to main div
     postDiv.appendChild(postTitle);
