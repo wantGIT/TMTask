@@ -40,13 +40,15 @@ async function main() {
 
     // Use the thumbnail
     const thumbnail = document.createElement("img");
-    thumbnail.src = redditData[i].data.thumbnail;
+    const thumbURL = redditData[i].data.thumbnail;
     thumbnail.className = "thumbnail";
     thumbnail.alt = "Thumbnail";
+    thumbnail.src = thumbURL;
 
     // Add to main div
     postDiv.appendChild(postTitle);
-    postDiv.appendChild(thumbnail);
+    // If there is a thumbnail attach it otherwise skip it
+    if (thumbURL.match(/((.jpeg)|(.jpg))$/)) postDiv.appendChild(thumbnail);
     postDiv.appendChild(subredditDiv);
     mainDisplay.appendChild(postDiv);
   }
