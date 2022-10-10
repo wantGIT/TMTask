@@ -37,16 +37,11 @@ h1 {
   justify-content: space-between;
   background-color: #5bc5ce;
   border-radius: 16px;
-}
-
-.post_link {
-  display: flex;
-  justify-content: center;
+  text-decoration: none;
 }
 
 .subreddit {
   display: flex;
-  justify-content: center;
   font-family: brother-1816, sans-serif;
   color: #fff;
 }
@@ -56,6 +51,11 @@ h1 {
   color: #fff;
   display: flex;
   margin: 8px;
+}
+
+.r {
+  font-family: brother-1816, sans-serif;
+  color: #e6433e;
 }
 
 .thumbnail {
