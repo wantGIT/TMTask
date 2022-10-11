@@ -24,6 +24,7 @@ async function main() {
     // Get the subreddit name
     const subredditDiv = document.createElement("div");
     subredditDiv.className = "subreddit";
+
     // Add subreddit with some styling
     const subR = document.createElement("div");
     const subRname = document.createElement("div");
@@ -43,7 +44,10 @@ async function main() {
     const thumbURL = redditData[i].data.thumbnail;
     thumbnail.className = "thumbnail";
     thumbnail.alt = "Thumbnail";
-    if (thumbURL.match(/((.jpeg)|(.jpg))$/)) thumbnail.src = thumbURL;
+
+    // Start by using the url if it is an image, otherwise use the lower-res thumbnail
+    if (postInfo.url.match(/((.jpeg)|(.jpg))$/)) thumbnail.src = postInfo.url;
+    else if (thumbURL.match(/((.jpeg)|(.jpg))$/)) thumbnail.src = thumbURL;
 
     // Create upvote ratio bar
     const ratio = document.createElement("div");
