@@ -10,8 +10,6 @@ async function main() {
 
   const mainDisplay = document.getElementById("main_display");
 
-  console.log(redditData);
-
   for (let i = 0; i < redditData.length; i++) {
     // The useful data
     const postInfo = redditData[i].data;
