@@ -57,6 +57,7 @@ async function main() {
     const liked = document.createElement("div");
     liked.className = "liked";
     liked.style.backgroundColor = "#f5a313";
+    liked.style.borderRadius = "4px";
     liked.style.height = "100%";
     liked.style.width = `${postInfo.upvote_ratio * 100}%`;
 
