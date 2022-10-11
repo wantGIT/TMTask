@@ -54,13 +54,13 @@ async function main() {
     liked.className = "liked";
     liked.style.backgroundColor = "#f5a313";
     liked.style.height = "100%";
-    console.log(postInfo.upvote_ratio);
     liked.style.width = `${postInfo.upvote_ratio * 100}%`;
 
     ratio.appendChild(liked);
 
     // Create a post Footer and add subreddit and ratio to it
     const postFooter = document.createElement("div");
+    postFooter.className = "footer";
     postFooter.appendChild(ratio);
     postFooter.appendChild(subredditDiv);
 

@@ -4,7 +4,7 @@ body {
 }
 
 h1 {
-  margin: 64px;
+  margin: 32px 0px 32px 64px;
   color: #e6433e;
   font-size: 60px;
   font-family: brother-1816, sans-serif;
@@ -14,8 +14,9 @@ h1 {
 #main_display {
   display: flex;
   width: 100%;
-  margin: 32px;
+  margin-top: 32px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 #head_bar {
@@ -65,8 +66,7 @@ h1 {
 
 .post {
   width: 300px;
-  padding: 16px;
-  margin: 16px;
+  margin: 8px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -87,7 +87,7 @@ h1 {
   font-family: brother-1816, sans-serif;
   color: #fff;
   display: flex;
-  margin: 8px;
+  margin: 24px;
   font-size: 22px;
 }
 
@@ -103,6 +103,10 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.footer {
+  margin: 12px;
 }
 
 .thumbnail {
