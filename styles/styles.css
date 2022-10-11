@@ -1,5 +1,6 @@
 body {
   background-color: #222b2d;
+  margin: 0px;
 }
 
 h1 {
@@ -20,6 +21,9 @@ h1 {
 #head_bar {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: #222b2d;
 }
 
 #separator {
@@ -29,32 +33,32 @@ h1 {
 }
 
 #sep0 {
-  width: 16.6%;
+  width: 16.7%;
   height: 20px;
   background-color: #90cf39;
 }
 #sep1 {
-  width: 16.6%;
+  width: 16.7%;
   height: 20px;
   background-color: #f5a313;
 }
 #sep2 {
-  width: 16.6%;
+  width: 16.7%;
   height: 20px;
   background-color: #0000ff;
 }
 #sep3 {
-  width: 16.6%;
+  width: 16.7%;
   height: 20px;
   background-color: #222b2d;
 }
 #sep4 {
-  width: 16.6%;
+  width: 16.7%;
   height: 20px;
   background-color: #5bc5ce;
 }
 #sep5 {
-  width: 16.6%;
+  width: 16.7%;
   height: 20px;
   background-color: #e6433e;
 }
