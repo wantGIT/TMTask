@@ -73,6 +73,7 @@ h1 {
   background-color: #5bc5ce;
   border-radius: 16px;
   text-decoration: none;
+  box-shadow: 2px 2px #0000ff;
 }
 
 .subreddit {
@@ -93,6 +94,15 @@ h1 {
 .r {
   font-family: brother-1816, sans-serif;
   color: #e6433e;
+}
+
+.ratio {
+  height: 8px;
+  margin-top: 12px;
+  background-color: #0000ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .thumbnail {

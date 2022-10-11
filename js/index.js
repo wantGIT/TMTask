@@ -10,6 +10,8 @@ async function main() {
 
   const mainDisplay = document.getElementById("main_display");
 
+  console.log(redditData);
+
   for (let i = 0; i < redditData.length; i++) {
     // The useful data
     const postInfo = redditData[i].data;
@@ -43,11 +45,30 @@ async function main() {
     thumbnail.alt = "Thumbnail";
     if (thumbURL.match(/((.jpeg)|(.jpg))$/)) thumbnail.src = thumbURL;
 
+    // Create upvote ratio bar
+    const ratio = document.createElement("div");
+    ratio.className = "ratio";
+
+    // Create a liked/disliked bar and set styling
+    const liked = document.createElement("div");
+    liked.className = "liked";
+    liked.style.backgroundColor = "#f5a313";
+    liked.style.height = "100%";
+    console.log(postInfo.upvote_ratio);
+    liked.style.width = `${postInfo.upvote_ratio * 100}%`;
+
+    ratio.appendChild(liked);
+
+    // Create a post Footer and add subreddit and ratio to it
+    const postFooter = document.createElement("div");
+    postFooter.appendChild(ratio);
+    postFooter.appendChild(subredditDiv);
+
     // Add to main div
     postDiv.appendChild(postTitle);
     // If there is a thumbnail attach it otherwise skip it
     if (thumbURL.match(/((.jpeg)|(.jpg))$/)) postDiv.appendChild(thumbnail);
-    postDiv.appendChild(subredditDiv);
+    postDiv.appendChild(postFooter);
     mainDisplay.appendChild(postDiv);
   }
 }
